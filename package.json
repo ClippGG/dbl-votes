@@ -1,6 +1,12 @@
 {
-    "name": "topgg-votes",
-    "version": "1.0.0",
+    "name": "dbl-votes",
+    "version": "1.0.1",
+    "description": "This is a Node.js package that allows you to listen for vote events from the Top.gg API and easily store them in a database.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/burbtech/dbl-votes"
+    },
     "dependencies": {
         "@supabase/supabase-js": "^2.7.1",
         "events": "^3.3.0",
