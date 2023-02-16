@@ -1,6 +1,6 @@
 # dbl-votes
 
-This is a Node.js package that allows you to listen for vote events from the Top.gg API.
+This is a Node.js package that allows you to listen for vote events from the Top.gg API and easily store them in a database.
 
 ## Installation
 
@@ -41,10 +41,18 @@ topgg.on("debug", (msg) => {
 When creating a new `TopggClient` instance, you can pass in a configuration object with the following properties:
 * `port` (number, required): The port that the server should listen on.
 * `path` (string, required): The path that the top.gg API will send vote events to.
+* `auth` (string, optional): The authorization token that the top.gg API will send with vote events. If this is not specified, the server will not require authorization.
+
 * `mongo` (object, optional): Configuration for storing votes in a MongoDB database. The object should have the following properties:
 * `url` (string, required): The URL of the MongoDB server.
 * `db` (string, required): The name of the database to use.
 * `collection` (string, required): The name of the collection to use.
+
+* `supabase` (object, optional): Configuration for storing votes in a Supabase database. The object should have the following properties:
+* `url` (string, required): The URL of the Supabase server.
+* `key` (string, required): The API key to use.
+* `table` (string, required): The name of the table to use.
+
 * `debug` (boolean, optional): Whether to enable debug messages. Defaults to false.
 
 ## Events
