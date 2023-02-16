@@ -1,6 +1,6 @@
 {
     "name": "dbl-votes",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "This is a Node.js package that allows you to listen for vote events from the Top.gg API and easily store them in a database.",
     "main": "index.js",
     "repository": {
