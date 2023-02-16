@@ -70,3 +70,8 @@ When creating a new `TopggClient` instance, you can pass in a configuration obje
 The `TopggClient` class emits the following events:
 * `vote` (bot: string, user: string): Emitted when a vote is received from the Top.gg API. The bot parameter is the ID of the bot that was voted for, and the user parameter is the ID of the user who voted.
 * `debug` (msg: string): Emitted when a debug message is generated. The msg parameter is the message that was generated. This event is only emitted if the debug option is enabled.
+
+## Methods
+
+The `TopggClient` class has the following methods:
+* `hasVoted(bot: string, user: string, time: string): Promise<boolean>`: Checks if a user has voted for a bot within a certain time period. The bot parameter is the ID of the bot to check, the user parameter is the ID of the user to check, and the time parameter is the time period to check. The time parameter should be a string in the format `Xh` where X is the number of hours to check. For example, `12h` would check if the user has voted within the last 12 hours. This method returns a promise that resolves to a boolean indicating whether the user has voted within the specified time period
