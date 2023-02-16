@@ -14,7 +14,7 @@ npm install dbl-votes
 To use the package, you need to require it and create a new instance of the `TopggClient` class. You can then listen for vote events and debug messages by registering event handlers with the `on` method.
 
 ```js
-const TopggClient = require("./index.js");
+const TopggClient = require("dbl-votes");
 
 const topgg = new TopggClient({
     port: 3000,
@@ -74,4 +74,4 @@ The `TopggClient` class emits the following events:
 ## Methods
 
 The `TopggClient` class has the following methods:
-* `hasVoted(bot: string, user: string, time: string): Promise<boolean>`: Checks if a user has voted for a bot within a certain time period. The bot parameter is the ID of the bot to check, the user parameter is the ID of the user to check, and the time parameter is the time period to check. The time parameter should be a string in the format `Xh` where X is the number of hours to check. For example, `12h` would check if the user has voted within the last 12 hours. This method returns a promise that resolves to a boolean indicating whether the user has voted within the specified time period
+* `hasVoted(bot: string, user: string, time: string): Promise<boolean>`: Checks if a user has voted for a bot within a certain time period. The bot parameter is the ID of the bot to check, the user parameter is the ID of the user to check, and the time parameter is the time period to check. The time parameter should be a string in the format `Xh` where X is the number of hours to check. For example, `12h` would check if the user has voted within the last 12 hours. This method returns a promise that resolves to a boolean indicating whether the user has voted within the specified time period.
