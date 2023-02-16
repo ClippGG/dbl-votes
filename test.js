@@ -1,6 +1,6 @@
 const TopggClient = require("./index.js");
 
-const client = new TopggClient({
+const topgg = new TopggClient({
     port: 3000,
     path: "/vote",
     mongo: {
@@ -11,10 +11,10 @@ const client = new TopggClient({
     debug: true
 });
 
-client.on("vote", (bot, user) => {
+topgg.on("vote", (bot, user) => {
     console.log(`${user} voted for ${bot}`);
 });
 
-client.on("debug", (msg) => {
+topgg.on("debug", (msg) => {
     console.log(msg);
 });
