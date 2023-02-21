@@ -1,7 +1,6 @@
 const EventEmitter = require('events');
 const { MongoClient } = require('mongodb');
 const { createClient } = require('@supabase/supabase-js');
-// we are making a webserver that emits `vote` events and passes (bot, user) as arguments
 
 
 class TopggClient extends EventEmitter {
@@ -11,17 +10,14 @@ class TopggClient extends EventEmitter {
         if (!config) {
             throw new Error('No config provided');
         }
-        if (!config.mongo && !config.supabase) {
-            throw new Error('No database provided');
-        }
         if (config.mongo && config.supabase) {
-            throw new Error('Only one database can be used');
+            throw new Error('Only one database can be used!');
         }
         if (config.mongo && (!config.mongo.url || !config.mongo.collection || !config.mongo.db)) {
-            throw new Error('MongoDB config is incomplete');
+            throw new Error('MongoDB config is incomplete!');
         }
         if (config.supabase && (!config.supabase.url || !config.supabase.key || !config.supabase.table)) {
-            throw new Error('Supabase config is incomplete');
+            throw new Error('Supabase config is incomplete!');
         }
 
         this.config = {
