@@ -19,12 +19,14 @@ const TopggClient = require("dbl-votes");
 const topgg = new TopggClient({
     port: 3000,
     path: "/vote",
+    // don't want to use a database? don't put any database details below!
+    // if you want to use Mongo
     mongo: {
         url: "mongodb://localhost:27017",
         db: "bot",
         collection: "votes"
     },
-    // or if you want to use supabase
+    // or if you want to use Supabase
     supabase: {
         url: "https://supabaseurl.supabase.co",
         key: "supabasekey",
