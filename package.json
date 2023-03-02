@@ -5,7 +5,7 @@
     "main": "index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/burbtech/dbl-votes"
+        "url": "https://github.com/ClipGG/dbl-votes"
     },
     "dependencies": {
         "@supabase/supabase-js": "^2.7.1",
